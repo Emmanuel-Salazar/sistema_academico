@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "Pessoa.h"
+#include "Universidade.h"
 
 class Professor : public Pessoa{
 private:

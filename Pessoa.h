@@ -1,8 +1,6 @@
 #ifndef _PESSOA_H_
 #define _PESSOA_H_
 
-#include "Universidade.h"
-
 class Pessoa{
 protected:
     int diaP;
