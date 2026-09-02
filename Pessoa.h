@@ -1,6 +1,8 @@
 #ifndef _PESSOA_H_
 #define _PESSOA_H_
 
+#include "stdafx.h"
+
 class Pessoa{
 protected:
     int diaP;

@@ -1,7 +1,6 @@
 #ifndef _PROFESSOR_H_
 #define _PROFESSOR_H_
 
-#include "stdafx.h"
 #include "Pessoa.h"
 #include "Universidade.h"
 
