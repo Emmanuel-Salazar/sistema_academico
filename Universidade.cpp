@@ -2,8 +2,6 @@
 #include "Universidade.h"
 
 Universidade::Universidade(){
-   for(int i = 0; i < QTD_DPTOS; i++)
-        pDptos[i] = NULL;
 }
 
 Universidade::~Universidade(){
@@ -17,16 +15,14 @@ void Universidade::setNome(string n){
    nome = n;
 }
 
-void Universidade::setDepartamento(Departamento* pdep, int ctd){
-   if(ctd < QTD_DPTOS)
-      pDptos[ctd] = pdep;
-   else
-      cout << "Limite de apartamentos atingido" << endl;
+void Universidade::setDepartamento(Departamento* pdep){
+   pDptos.push_back(pdep);
 }
 
 void Universidade::imprimeDptos(){
-    for(int i = 0; i < QTD_DPTOS; i++)
-        if(pDptos[i] != NULL)
-            cout << pDptos[i]->getNome() << endl;
+   list<Departamento *>::iterator iterator;
+
+   for(iterator = pDptos.begin(); iterator != pDptos.end(); iterator++)
+      cout << (*iterator)->getNome() << endl;
 
 }

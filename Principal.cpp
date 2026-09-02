@@ -28,12 +28,12 @@ Principal::Principal()
     FisicaPrinceton.setNome("Fisica");
     MatematicaCambridge.setNome("Matematica");
 
-    UTFPR.setDepartamento(&DAELN, 0);
-    UTFPR.setDepartamento(&ModaUTFPR, 1);
-    UTFPR.setDepartamento(&TecnologiaUTFPR, 2);
-    UFPR.setDepartamento(&DSEAAG, 0);
-    Princeton.setDepartamento(&FisicaPrinceton, 0);
-    Cambridge.setDepartamento(&MatematicaCambridge, 0);
+    UTFPR.setDepartamento(&DAELN);
+    UTFPR.setDepartamento(&ModaUTFPR);
+    UTFPR.setDepartamento(&TecnologiaUTFPR);
+    UFPR.setDepartamento(&DSEAAG);
+    Princeton.setDepartamento(&FisicaPrinceton);
+    Cambridge.setDepartamento(&MatematicaCambridge);
 
     DAELN.setUniversidade(&UTFPR);
     DSEAAG.setUniversidade(&UFPR);
@@ -47,14 +47,6 @@ Principal::Principal()
 
 void Principal::Executar()
 {
-    Emmanuel.Calc_Idade(diaAtual, mesAtual, anoAtual);
-    Haide.Calc_Idade(diaAtual, mesAtual, anoAtual);
-    Marx.Calc_Idade(diaAtual, mesAtual, anoAtual);
-    Einstein.Calc_Idade(diaAtual, mesAtual, anoAtual);
-    Newton.Calc_Idade(diaAtual, mesAtual, anoAtual);
-
-    cout << endl;
-
     Emmanuel.setUnivFiliado(&UTFPR);
     Haide.setUnivFiliado(&UFPR);
     Marx.setUnivFiliado(&UTFPR);
@@ -66,6 +58,14 @@ void Principal::Executar()
     Marx.setDepartamento(&DAELN);
     Einstein.setDepartamento(&FisicaPrinceton);
     Newton.setDepartamento(&MatematicaCambridge);
+
+    Emmanuel.Calc_Idade(diaAtual, mesAtual, anoAtual);
+    Haide.Calc_Idade(diaAtual, mesAtual, anoAtual);
+    Marx.Calc_Idade(diaAtual, mesAtual, anoAtual);
+    Einstein.Calc_Idade(diaAtual, mesAtual, anoAtual);
+    Newton.Calc_Idade(diaAtual, mesAtual, anoAtual);
+
+    cout << endl;
 
     Emmanuel.OndeTrabalho();
     Haide.OndeTrabalho();

@@ -7,7 +7,7 @@
 #include <string>
 #include <iostream>
 #include <ctime>
-#include <vector>
+#include <list>
 using namespace std;
 using std::endl;
 
