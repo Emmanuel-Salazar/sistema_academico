@@ -1,0 +1,87 @@
+# depslib dependency file v1.0
+1787856476 source:c:\2708\projetoooexemplo\departamento.cpp
+	"stdafx.h"
+	"Departamento.h"
+	"Universidade.h"
+
+1787853991 c:\2708\projetoooexemplo\stdafx.h
+	<stdio.h>
+	<string>
+	<iostream>
+	<ctime>
+
+1787856436 c:\2708\projetoooexemplo\departamento.h
+
+1787853664 source:c:\2708\projetoooexemplo\projetoooexemplo.cpp
+	"stdafx.h"
+	"Principal.h"
+
+1787868942 c:\2708\projetoooexemplo\principal.h
+	"Pessoa.h"
+	"Universidade.h"
+
+1787851951 c:\2708\projetoooexemplo\pessoa.h
+	"Universidade.h"
+
+1787854526 c:\2708\projetoooexemplo\universidade.h
+	"Departamento.h"
+
+1787851744 source:c:\2708\projetoooexemplo\stdafx.cpp
+	"stdafx.h"
+
+1787855288 source:c:\2708\projetoooexemplo\universidade.cpp
+	"stdafx.h"
+	"Universidade.h"
+
+1787855455 source:c:\2708\projetoooexemplo\pessoa.cpp
+	"stdafx.h"
+	"Pessoa.h"
+
+1787855520 source:c:\2708\projetoooexemplo\principal.cpp
+	"stdafx.h"
+	"Principal.h"
+	"Windows.h"
+
+1787856476 source:c:\pre0109\projetoooexemplo\departamento.cpp
+	"stdafx.h"
+	"Departamento.h"
+	"Universidade.h"
+
+1787853991 c:\pre0109\projetoooexemplo\stdafx.h
+	<stdio.h>
+	<string>
+	<iostream>
+	<ctime>
+
+1787856436 c:\pre0109\projetoooexemplo\departamento.h
+
+1787854526 c:\pre0109\projetoooexemplo\universidade.h
+	"Departamento.h"
+
+1787855455 source:c:\pre0109\projetoooexemplo\pessoa.cpp
+	"stdafx.h"
+	"Pessoa.h"
+
+1787851951 c:\pre0109\projetoooexemplo\pessoa.h
+	"Universidade.h"
+
+1787869070 source:c:\pre0109\projetoooexemplo\principal.cpp
+	"stdafx.h"
+	"Principal.h"
+	"Windows.h"
+
+1787868942 c:\pre0109\projetoooexemplo\principal.h
+	"Pessoa.h"
+	"Universidade.h"
+
+1787853664 source:c:\pre0109\projetoooexemplo\projetoooexemplo.cpp
+	"stdafx.h"
+	"Principal.h"
+
+1787851744 source:c:\pre0109\projetoooexemplo\stdafx.cpp
+	"stdafx.h"
+
+1787855288 source:c:\pre0109\projetoooexemplo\universidade.cpp
+	"stdafx.h"
+	"Universidade.h"
+
