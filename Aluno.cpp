@@ -18,19 +18,3 @@ void Aluno::setRA(int ra){
 int Aluno::getRA(){
     return RA;
 }
-
-void Aluno::setProx(Aluno* prox){
-    pProx = prox;
-}
-
-Aluno* Aluno::getProx(){
-    return pProx; 
-}
-
-void Aluno::setAnt(Aluno* ant){
-    pAnt = ant;
-}
-
-Aluno* Aluno::getAnt(){
-    return pAnt; 
-}

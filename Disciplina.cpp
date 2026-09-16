@@ -1,5 +1,5 @@
 #include "Disciplina.h"
-#include "stdafx.h"
+#include "stdafx.h" 
 
 Disciplina::Disciplina(int na, string ac){
     pDeptoAssociado = NULL;
@@ -62,15 +62,19 @@ Disciplina* Disciplina::getAnt(){
 }
 
 void Disciplina::incluaAluno(Aluno* a){
+    ElAluno* pAux = NULL;
+    pAux = new ElAluno();
+    pAux->setAluno(a);
+
     if(contAlunos < numAlunos && a != NULL){
         if(pAlunoPrim == NULL){
-            pAlunoPrim = a;
-            pAlunoAtual = a;
+            pAlunoPrim = pAux;
+            pAlunoAtual = pAux;
         }
         else{
-            pAlunoAtual->setProx(a);
-            a->setAnt(pAlunoAtual);
-            pAlunoAtual = a;
+            pAlunoAtual->pProx = pAux;
+            pAux->pAnt = pAlunoAtual;
+            pAlunoAtual = pAux;
         }
         contAlunos++;   
     }
@@ -81,18 +85,21 @@ void Disciplina::incluaAluno(Aluno* a){
 }
 
 void Disciplina::listeAlunos(){
-    Aluno* pAux = pAlunoPrim;
+    ElAluno* pAux;
+    pAux = pAlunoPrim;
 
     while(pAux != NULL){
         cout << "O aluno " << pAux->getNome() << " pertence a disciplina " << nome << endl;
-        pAux = pAux->getProx();
+        pAux = pAux->pProx;
     }
 }
 
 void Disciplina::listeAlunos2(){
-    Aluno* pAux = pAlunoAtual;
+    ElAluno* pAux;
+    pAux = pAlunoAtual;
+        
     while(pAux != NULL){
         cout << "O aluno " << pAux->getNome() << " pertence a disciplina " << nome << endl;
-        pAux = pAux->getAnt();
+        pAux = pAux->pAnt;
     }
 }

@@ -6,8 +6,6 @@
 class Aluno : public Pessoa{
 private:
     int RA;
-    Aluno* pProx;
-    Aluno* pAnt;
 
 public:
 
@@ -16,10 +14,6 @@ public:
     ~Aluno();
     int getRA();
     void setRA(int ra);
-    void setProx(Aluno* prox);
-    Aluno* getProx();
-    void setAnt(Aluno* ant);
-    Aluno* getAnt();
 };
 
 #endif

@@ -100,6 +100,10 @@ void Principal::InicializaDisciplinas(){
     IntrodAlgoritmo.incluaAluno(&Beltrano);
     IntrodAlgoritmo.incluaAluno(&Jose);
     IntrodAlgoritmo.incluaAluno(&Maria);
+
+    Computacao1.incluaAluno(&Fulano);
+    Computacao1.incluaAluno(&Ciclano);
+    Computacao1.incluaAluno(&Beltrano);
 }
 
 void Principal::CalcIdadeProfessores()
@@ -137,6 +141,8 @@ void Principal::ListarDiscDeptos()
 
 void Principal::ListarAlunosDisc(){
     IntrodAlgoritmo.listeAlunos();
+    cout << endl;
+    Computacao1.listeAlunos(); 
 }
 
 void Principal::Executar()

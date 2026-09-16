@@ -1,6 +1,6 @@
 all:
 	g++ ./*.cpp -o main
-run:
+run: all
 	./main
 clear: 
 	rm main
