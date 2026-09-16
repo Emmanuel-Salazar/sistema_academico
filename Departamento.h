@@ -3,20 +3,31 @@
 #define _DEPARTAMENTO_H_
 
 class Universidade;
+class Disciplina;
 
 class Departamento
 {
-  private:
-     string nome;
-     Universidade* pUniv;
+private:
+    string nome;
+    Universidade* pUniv;
 
-  public:
-     Departamento();
-     ~Departamento();
+    Disciplina* pDisciplPrim;
+    Disciplina* pDisciplAtual;
 
-     void setNome(string n);
-     string getNome();
-     void setUniversidade(Universidade *pU);
+
+public:
+    Departamento();
+    ~Departamento();
+
+    int getId();
+
+    void setNome(string n);
+    string getNome();
+
+    void setUniversidade(Universidade *pU);
+
+    void incluaDisciplina(Disciplina* pd);
+    void listeDisciplinas();
 };
 
 #endif

@@ -2,13 +2,12 @@
 #define _STDAFX_H_
 
 #include <stdio.h>
-
-
-#include <string>
+#include <stdlib.h>
 #include <iostream>
+#include <string>
 #include <ctime>
 #include <list>
+
 using namespace std;
-using std::endl;
 
 #endif

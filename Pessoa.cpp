@@ -45,3 +45,7 @@ int Pessoa::informaIdade()
 {
    return idadeP;
 }
+
+string Pessoa::getNome(){
+  return nomeP;
+}
