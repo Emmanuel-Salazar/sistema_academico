@@ -85,15 +85,15 @@ void Principal::InicializaDisciplinas(){
     Computacao2.setNome("Computacao 2");
     Metodos2.setNome("Metodos 2");
     
-    DAELN.incluaDisciplina(&Computacao1);
-    DAELN.incluaDisciplina(&IntrodAlgoritmo);
-    DAELN.incluaDisciplina(&Computacao2);
-    DAELN.incluaDisciplina(&Metodos2);
-
     Computacao1.setDepartamento(&DAELN);
     IntrodAlgoritmo.setDepartamento(&DAELN);
     Computacao2.setDepartamento(&DAELN);
     Metodos2.setDepartamento(&DAELN);
+    
+    DAELN.incluaDisciplina(&Computacao1);
+    DAELN.incluaDisciplina(&IntrodAlgoritmo);
+    DAELN.incluaDisciplina(&Computacao2);
+    DAELN.incluaDisciplina(&Metodos2);
 
     IntrodAlgoritmo.incluaAluno(&Fulano);
     IntrodAlgoritmo.incluaAluno(&Ciclano);
@@ -149,7 +149,7 @@ void Principal::Executar()
     cout << endl;
     ListarAlunosDisc();
     cout << endl;
-    //ListarDiscDeptos();
-    //cout << endl;
+    ListarDiscDeptos();
+    cout << endl;
 }
 

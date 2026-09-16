@@ -49,8 +49,8 @@ void Disciplina::setProx(Disciplina* p){
     pProx = p;
 }
 
-void Disciplina::setAnt(Disciplina* p){
-    pAnt = p;
+void Disciplina::setAnt(Disciplina* a){
+    pAnt = a;
 }
 
 Disciplina* Disciplina::getProx(){

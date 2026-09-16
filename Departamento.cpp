@@ -4,13 +4,12 @@
 
 #include "Universidade.h"
 
-Departamento::Departamento() : nome(""), pUniv(NULL){
+Departamento::Departamento(){
     pDisciplPrim = NULL;
     pDisciplAtual = NULL;
 }
 
-Departamento::~Departamento()
-{
+Departamento::~Departamento() {
     pDisciplPrim = NULL;
     pDisciplAtual = NULL;
 }
@@ -29,23 +28,26 @@ void Departamento::setUniversidade(Universidade* pU){
     pUniv = pU;
 }
 
-void Departamento::incluaDisciplina(Disciplina* pd){
-    if(pDisciplPrim == NULL){
-      pDisciplAtual = pd;
-      pDisciplPrim = pd;
+void Departamento::incluaDisciplina(Disciplina* pd) {
+    if (pd == NULL) return;
+
+    pd->setProx(NULL);
+
+    if (pDisciplPrim == NULL) {
+        pDisciplPrim = pd;
+        pd->setAnt(NULL);
+    } else {
+        pDisciplAtual->setProx(pd);
+        pd->setAnt(pDisciplAtual);
     }
-    else{
-      pDisciplAtual->setProx(pd);
-      pd->setAnt(pDisciplAtual);
-      pDisciplAtual = pd;
-    }
+    pDisciplAtual = pd; // Strictly tracks the tail of the list
 }
 
-void Departamento::listeDisciplinas()
-{
+void Departamento::listeDisciplinas() {
     Disciplina* pAux = pDisciplPrim;
-    while(pAux != NULL){
-        cout << "A disciplina " << pAux->getNome() << " pertence ao Departamento " << nome << endl;
+    while (pAux != NULL) {
+        cout << "A disciplina " << pAux->getNome() 
+             << " pertence ao Departamento " << nome << endl;
         pAux = pAux->getProx();
     }
 }
