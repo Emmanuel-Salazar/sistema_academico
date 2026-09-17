@@ -141,8 +141,12 @@ void Principal::ListarDiscDeptos()
 
 void Principal::ListarAlunosDisc(){
     IntrodAlgoritmo.listeAlunos();
+    //cout << endl;
+    //IntrodAlgoritmo.listeAlunos2();
     cout << endl;
-    Computacao1.listeAlunos(); 
+    Computacao1.listeAlunos();
+    //cout << endl;
+    //Computacao1.listeAlunos2(); 
 }
 
 void Principal::Executar()
