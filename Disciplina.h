@@ -4,39 +4,35 @@
 #include "stdafx.h" 
 #include "ElAluno.h"
 #include "Departamento.h"
+#include "ListaAlunos.h"
 
 class Disciplina{
 private:
     int id;
-    string nome;
+    string nome;    
     string areaConhecimento;
     Departamento* pDeptoAssociado;
     Disciplina* pProx;
     Disciplina* pAnt;
-    ElAluno* pAlunoPrim;
-    ElAluno* pAlunoAtual;
-    int numAlunos;
-    int contAlunos;
+
+    ListaAlunos objAlunos;
 
 public:
     Disciplina(int na = 45, string ac = "");
     ~Disciplina(); 
-
     
     void setId(int i);
     int getId();
-
-    void setProx(Disciplina* p);
-    Disciplina* getProx();
-
-    void setAnt(Disciplina* p);
-    Disciplina* getAnt();
-
     void setNome(string n);
     string getNome();
 
     void setDepartamento(Departamento* d);
     Departamento* getDepartamento();
+
+    void setProx(Disciplina* p);
+    Disciplina* getProx();
+    void setAnt(Disciplina* p);
+    Disciplina* getAnt();
 
     void incluaAluno(Aluno* a);
     void listeAlunos();

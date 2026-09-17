@@ -49,3 +49,7 @@ int Pessoa::informaIdade()
 string Pessoa::getNome(){
   return nomeP;
 }
+
+void Pessoa::setNome(string nome){
+  nomeP = nome;
+}

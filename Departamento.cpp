@@ -40,7 +40,7 @@ void Departamento::incluaDisciplina(Disciplina* pd) {
         pDisciplAtual->setProx(pd);
         pd->setAnt(pDisciplAtual);
     }
-    pDisciplAtual = pd; // Strictly tracks the tail of the list
+    pDisciplAtual = pd;
 }
 
 void Departamento::listeDisciplinas() {

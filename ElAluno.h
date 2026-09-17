@@ -6,7 +6,7 @@
 class ElAluno{
 private:
     Aluno* pAl;
-    
+  
 public:
     ElAluno();
     ~ElAluno();

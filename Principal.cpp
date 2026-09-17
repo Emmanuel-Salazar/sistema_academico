@@ -47,7 +47,7 @@ void Principal::InicializaDepartamentos(){
 
 void Principal::InicializaProfessores(){
     Emmanuel.Inicializa(18, 12, 2006, "Emmanuel Salazar");
-    Haide.Inicializa(4,1,2008, "Haide Monnerat dos Santos");
+    Haide.Inicializa(4,1,2008, "Haide Monnerat dos Santos");//oh, mae, qm eh essa?
     Marx.Inicializa( 5, 5, 1818, "Karl Marx");
     Einstein.Inicializa(14, 3, 1879, "Albert Einstein");
     Newton.Inicializa(4, 1, 1643, "Isaac Newton");
@@ -161,5 +161,9 @@ void Principal::Executar()
     cout << endl;
     ListarDiscDeptos();
     cout << endl;
+
+    Fulano.setNome("Fulano de Tal Alterado");
+    cout << "O nome do aluno Fulano foi alterado para: " << Fulano.getNome() << endl << endl;
+    Computacao1.listeAlunos2();
 }
 

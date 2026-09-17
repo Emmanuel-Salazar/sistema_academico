@@ -1,23 +1,16 @@
 #include "Disciplina.h"
-#include "stdafx.h" 
 
-Disciplina::Disciplina(int na, string ac){
+Disciplina::Disciplina(int na, string ac): objAlunos(na, this->nome){
     pDeptoAssociado = NULL;
     pProx = NULL;
     pAnt = NULL;
-    pAlunoPrim = NULL;
-    pAlunoAtual = NULL;
     areaConhecimento = ac;
-    numAlunos = na;
-    contAlunos = 0;
 }
 
 Disciplina::~Disciplina(){
     pDeptoAssociado = NULL;
     pProx = NULL;
     pAnt = NULL;
-    pAlunoPrim = NULL;
-    pAlunoAtual = NULL;
 }
 
 void Disciplina::setId(int i){
@@ -29,6 +22,7 @@ int Disciplina::getId(){
 }
 
 void Disciplina::setNome(string n){
+    objAlunos.setNome(n); 
     nome = n;
 }
 
@@ -62,44 +56,13 @@ Disciplina* Disciplina::getAnt(){
 }
 
 void Disciplina::incluaAluno(Aluno* a){
-    ElAluno* pAux = NULL;
-    pAux = new ElAluno();
-    pAux->setAluno(a);
-
-    if(contAlunos < numAlunos && a != NULL){
-        if(pAlunoPrim == NULL){
-            pAlunoPrim = pAux;
-            pAlunoAtual = pAux;
-        }
-        else{
-            pAlunoAtual->pProx = pAux;
-            pAux->pAnt = pAlunoAtual;
-            pAlunoAtual = pAux;
-        }
-        contAlunos++;   
-    }
-    else{
-        cout << "Aluno não incluido. Turma já lotada" << nome << endl;
-
-    }
+    objAlunos.incluaAluno(a);
 }
 
 void Disciplina::listeAlunos(){
-    ElAluno* pAux;
-    pAux = pAlunoPrim;
-
-    while(pAux != NULL){
-        cout << "O aluno " << pAux->getNome() << " pertence a disciplina " << nome << endl;
-        pAux = pAux->pProx;
-    }
+    objAlunos.listeAlunos();
 }
 
 void Disciplina::listeAlunos2(){
-    ElAluno* pAux;
-    pAux = pAlunoAtual;
-        
-    while(pAux != NULL){
-        cout << "O aluno " << pAux->getNome() << " pertence a disciplina " << nome << endl;
-        pAux = pAux->pAnt;
-    }
+    objAlunos.listeAlunos2();
 }

@@ -19,6 +19,7 @@ public:
     void Calc_Idade(int diaAT, int mesAT, int anoAT);
     int  informaIdade();
     string getNome();
+    void setNome(string nome);
 };
 
 #endif

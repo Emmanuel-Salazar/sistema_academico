@@ -2,6 +2,7 @@
 #ifndef _UNIVERSIDADE_H_
 #define _UNIVERSIDADE_H_
 
+#include "stdafx.h"
 #include "Departamento.h"
 
 class Universidade

@@ -1,7 +1,7 @@
-
 #ifndef _DEPARTAMENTO_H_
 #define _DEPARTAMENTO_H_
 
+#include "stdafx.h"
 class Universidade;
 class Disciplina;
 

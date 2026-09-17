@@ -1,5 +1,5 @@
 all:
-	g++ ./*.cpp -o main
+	g++ ./*.cpp ./*.h -o main
 run: all
 	./main
 clear: 
