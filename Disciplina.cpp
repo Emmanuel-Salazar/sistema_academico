@@ -1,16 +1,12 @@
 #include "Disciplina.h"
 
-Disciplina::Disciplina(int na, string ac): objAlunos(na, this->nome){
+Disciplina::Disciplina(int na, string ac): objLAlunos(na, this->nome){
     pDeptoAssociado = NULL;
-    pProx = NULL;
-    pAnt = NULL;
     areaConhecimento = ac;
 }
 
 Disciplina::~Disciplina(){
     pDeptoAssociado = NULL;
-    pProx = NULL;
-    pAnt = NULL;
 }
 
 void Disciplina::setId(int i){
@@ -22,7 +18,7 @@ int Disciplina::getId(){
 }
 
 void Disciplina::setNome(string n){
-    objAlunos.setNome(n); 
+    objLAlunos.setNome(n); 
     nome = n;
 }
 
@@ -39,30 +35,14 @@ Departamento* Disciplina::getDepartamento(){
     return pDeptoAssociado;
 }
 
-void Disciplina::setProx(Disciplina* p){
-    pProx = p;
-}
-
-void Disciplina::setAnt(Disciplina* a){
-    pAnt = a;
-}
-
-Disciplina* Disciplina::getProx(){
-    return pProx;
-}
-
-Disciplina* Disciplina::getAnt(){
-    return pAnt;
-}
-
 void Disciplina::incluaAluno(Aluno* a){
-    objAlunos.incluaAluno(a);
+    objLAlunos.incluaAluno(a);
 }
 
 void Disciplina::listeAlunos(){
-    objAlunos.listeAlunos();
+    objLAlunos.listeAlunos();
 }
 
 void Disciplina::listeAlunos2(){
-    objAlunos.listeAlunos2();
+    objLAlunos.listeAlunos2();
 }

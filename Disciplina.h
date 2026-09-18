@@ -1,8 +1,7 @@
 #ifndef _DISCIPLINA_H_
-#define _DISCIPLINA_H
+#define _DISCIPLINA_H_
 
-#include "stdafx.h" 
-#include "ElAluno.h"
+#include "stdafx.h"
 #include "Departamento.h"
 #include "ListaAlunos.h"
 
@@ -11,11 +10,9 @@ private:
     int id;
     string nome;    
     string areaConhecimento;
+    
     Departamento* pDeptoAssociado;
-    Disciplina* pProx;
-    Disciplina* pAnt;
-
-    ListaAlunos objAlunos;
+    ListaAlunos objLAlunos;
 
 public:
     Disciplina(int na = 45, string ac = "");

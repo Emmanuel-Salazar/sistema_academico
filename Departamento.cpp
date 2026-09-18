@@ -1,22 +1,22 @@
 #include "stdafx.h"
 #include "Departamento.h"
 #include "Disciplina.h"
-
+#include "ListaDisciplinas.h"
 #include "Universidade.h"
 
 Departamento::Departamento(){
-    pDisciplPrim = NULL;
-    pDisciplAtual = NULL;
+    objLDisciplinas = new ListaDisciplinas(-1, " ");
 }
 
 Departamento::~Departamento() {
-    pDisciplPrim = NULL;
-    pDisciplAtual = NULL;
+    if(objLDisciplinas)
+      delete objLDisciplinas;
 }
 
 void Departamento::setNome(string n)
 {
    nome = n;
+   objLDisciplinas->setNome(n);
 }
 
 string Departamento::getNome()
@@ -28,26 +28,18 @@ void Departamento::setUniversidade(Universidade* pU){
     pUniv = pU;
 }
 
+Universidade* Departamento::getUniversidade(){
+    return pUniv;
+}
+
 void Departamento::incluaDisciplina(Disciplina* pd) {
-    if (pd == NULL) return;
-
-    pd->setProx(NULL);
-
-    if (pDisciplPrim == NULL) {
-        pDisciplPrim = pd;
-        pd->setAnt(NULL);
-    } else {
-        pDisciplAtual->setProx(pd);
-        pd->setAnt(pDisciplAtual);
-    }
-    pDisciplAtual = pd;
+    objLDisciplinas->incluaDisciplina(pd);
 }
 
 void Departamento::listeDisciplinas() {
-    Disciplina* pAux = pDisciplPrim;
-    while (pAux != NULL) {
-        cout << "A disciplina " << pAux->getNome() 
-             << " pertence ao Departamento " << nome << endl;
-        pAux = pAux->getProx();
-    }
+    objLDisciplinas->listeDisciplinas();
+}
+
+void Departamento::listeDisciplinas2() {
+    objLDisciplinas->listeDisciplinas2();
 }

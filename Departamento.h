@@ -3,7 +3,8 @@
 
 #include "stdafx.h"
 class Universidade;
-class Disciplina;
+class Disciplina;   
+class ListaDisciplinas;
 
 class Departamento
 {
@@ -11,9 +12,7 @@ private:
     string nome;
     Universidade* pUniv;
 
-    Disciplina* pDisciplPrim;
-    Disciplina* pDisciplAtual;
-
+    ListaDisciplinas* objLDisciplinas;
 
 public:
     Departamento();
@@ -25,9 +24,11 @@ public:
     string getNome();
 
     void setUniversidade(Universidade *pU);
+    Universidade* getUniversidade();  
 
     void incluaDisciplina(Disciplina* pd);
     void listeDisciplinas();
+    void listeDisciplinas2();
 };
 
 #endif
