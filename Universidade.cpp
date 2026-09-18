@@ -16,13 +16,9 @@ void Universidade::setNome(string n){
 }
 
 void Universidade::setDepartamento(Departamento* pdep){
-   pDptos.push_back(pdep);
+   objLDepartamentos.incluaDepartamento(pdep);
 }
 
 void Universidade::imprimeDptos(){
-   list<Departamento *>::iterator iterator;
-
-   for(iterator = pDptos.begin(); iterator != pDptos.end(); iterator++)
-      cout << (*iterator)->getNome() << endl;
-
+   objLDepartamentos.listeDepartamentos();
 }

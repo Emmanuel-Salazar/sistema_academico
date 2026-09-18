@@ -43,6 +43,13 @@ void Principal::InicializaDepartamentos(){
     TecnologiaUTFPR.setUniversidade(&UTFPR);
     FisicaPrinceton.setUniversidade(&Princeton);
     MatematicaCambridge.setUniversidade(&Cambridge);
+
+    UTFPR.setDepartamento(&DAELN);
+    UTFPR.setDepartamento(&ModaUTFPR);
+    UTFPR.setDepartamento(&TecnologiaUTFPR);
+    UFPR.setDepartamento(&DSEAAG);
+    Princeton.setDepartamento(&FisicaPrinceton);
+    Cambridge.setDepartamento(&MatematicaCambridge);
 }
 
 void Principal::InicializaProfessores(){
@@ -165,5 +172,9 @@ void Principal::Executar()
     Fulano.setNome("Fulano de Tal Alterado");
     cout << "O nome do aluno Fulano foi alterado para: " << Fulano.getNome() << endl << endl;
     Computacao1.listeAlunos2();
+
+    cout << endl << "Listando departamentos das universidades: " << endl;
+    UTFPR.imprimeDptos();
+    UFPR.imprimeDptos();
 }
 
