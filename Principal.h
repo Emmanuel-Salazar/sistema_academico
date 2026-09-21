@@ -6,6 +6,9 @@
 #include "Universidade.h"
 #include "Disciplina.h"
 #include "Aluno.h"
+#include "ListaUniversidades.h"
+#include "ListaDepartamentos.h"
+#include "ListaDisciplinas.h"
 
 class Principal
 {
@@ -43,6 +46,10 @@ private:
   int mesAtual;
   int anoAtual;
 
+  ListaUniversidades LUniversidades;
+  ListaDepartamentos LDepartamentos;
+  ListaDisciplinas LDisciplinas;
+
 public:
   Principal();
 
@@ -61,6 +68,15 @@ public:
   void ConhecPessoa();
   void ListarDiscDeptos();
   void ListarAlunosDisc();
+
+  void CadDisciplina();
+  void CadDepartamento();
+  void CadUniversidade();
+
+  void Menu();
+  void MenuCad();
+  void MenuExe();
+
 };
 
 #endif

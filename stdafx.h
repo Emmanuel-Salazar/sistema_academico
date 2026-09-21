@@ -7,6 +7,7 @@
 #include <string>
 #include <ctime>
 #include <list>
+#include <limits>
 
 using namespace std;
 

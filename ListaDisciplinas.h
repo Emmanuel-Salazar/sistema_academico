@@ -16,7 +16,7 @@ private:
     ElDisciplina* pElDisciplAtual;
 
 public:
-    ListaDisciplinas(int nd, string n = "");
+    ListaDisciplinas(int nd = 100, string n = "");
     ~ListaDisciplinas();
 
     void setNome(string n);
