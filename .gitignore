@@ -27,7 +27,6 @@ main
 *.dll
 *.so.*
 
-
 # Fortran module files
 *.mod
 *.smod
@@ -59,6 +58,9 @@ vcpkg_installed/
 
 # debug information files
 *.dwo
+
+# vscode
+.vscode/
 
 # test output & cache
 Testing/
